@@ -5,6 +5,9 @@
 //Returns 1 if password length is at least 5 characters, otherwise 0
 int is_long_enough(const char *password)
 {
+    if (strlen(password) >= 5) {
+        return 1;
+    }
     
     return 0;
 }
@@ -12,6 +15,9 @@ int is_long_enough(const char *password)
 //Returns 1 if password does NOT contain a space, otherwise 0
 int has_no_space(const char *password)
 {
+    if (strcspn(password, " ") == strlen(password)) {
+        return 1;
+    }
     
     return 0;
 }
